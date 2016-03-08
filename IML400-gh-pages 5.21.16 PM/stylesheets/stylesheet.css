@@ -45,7 +45,7 @@ body {
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     transition: opacity 1s ease;
-    opacity: 0.2;
+    opacity: 0;
     text-decoration: none;
     word-spacing: 2em;
     
@@ -60,7 +60,7 @@ body {
 
 .menu {
     position: fixed;
-    width: 40px;
+    width: 0;
     height: 100%;
     background-color: #171717;
     position: fixed;
@@ -151,6 +151,12 @@ a {
   .pageHeader {
     padding: 2rem 1rem; } }
 
+#hotkey {
+ height: 100px;
+ width: 100px;
+ background-color: #FA6900;
+ border-radius: 5px;   
+}
 
 
 h1.project-name {
@@ -161,6 +167,7 @@ h1.project-name {
  letter-spacing: 50pt;
  text-align: center;
  padding-left: 60px;
+ opacity: 0;
 }
 
 @media screen and (min-width: 64em) {
