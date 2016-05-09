@@ -43,7 +43,9 @@ THREEx.Terrain.simplexHeightMap	= function(heightMap){
 			level	*= 2
             height	+= (simplex.noise(x/level, z/level)/2 + 0.1) * 1.5
 			level	*= 2
-			height	+= (simplex.noise(x/level, z/level)/2 + 0.1) * 3
+            height	+= (simplex.noise(x/level, z/level)/2 + 0.1) * 3
+			level	*= 2
+			height	+= (simplex.noise(x/level, z/level)/2 + 0.1) * 5
 			height	/= 1+0.5+0.25+0.125
 			// put the height in the heightMap
 			heightMap[x][z]	= height
@@ -259,18 +261,18 @@ THREEx.Terrain.heightToColor	= (function(){
 	return function(height){
 		// compute color based on height
         
-		if( height < .9 && height > 0.2){
-			color.setHex (0xb8042e)
+		if( height < 1.2 && height > 0.2){
+			color.setHex (0x8C8C8C)
         
 		}
-        else if (height >0.9) {
-         color.setHex (0xb8042e) 
+        else if (height < 0.3 && height > 0.1) {
+          color.setHex (0x8C8C8C)
         }
-        else if (height < 0.3 && height > 0.05) {
-          color.setHex (0xb8042e)
+        else if (height < 0.1 && height > 0) {
+         color.setHex (0x4E7500)   
         }
-        else if (height < 0.05 && height > -2) {
-         color.setHex (0x818181)   
+        else if (height < 0 && height > -2) {
+         color.setHex (0xE3D89D)   
         }
         else{
 			color.setHex (0xffffff)
