@@ -1,1 +1,0 @@
-{"uvs":[[]],"faces":[],"vertices":[],"materials":[],"normals":[],"metadata":{"formatVersion":3.1,"generatedBy":"Maya Exporter"}}
